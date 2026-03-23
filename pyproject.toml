@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-regex-explainer"
+version = "1.0.0"
+description = "AI-powered regular expression explainer."
+license = {text = "MIT"}
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.scripts]
+ai-regex-explainer = "ai_regex_explainer.main:cli"
+
+[tool.setuptools.packages.find]
+include = ["ai_regex_explainer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
